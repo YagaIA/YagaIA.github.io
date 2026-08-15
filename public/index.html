@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal da Insistência Cósmica</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Courier New', Courier, monospace; }
+        body { background-color: #0B0C10; color: #F5F5F7; line-height: 1.6; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; border-bottom: 2px solid #45A29E; padding-bottom: 30px; margin-bottom: 40px; }
+        h1 { color: #66FCF1; font-size: 2rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
+        .tagline { font-style: italic; color: #45A29E; font-size: 1.1rem; }
+        h2 { color: #66FCF1; font-size: 1.5rem; margin: 40px 0 20px 0; border-left: 4px solid #45A29E; padding-left: 10px; }
+        p { margin-bottom: 20px; text-align: justify; }
+        .chat-section { border: 2px dashed #45A29E; padding: 30px; margin: 40px 0; background-color: #11141a; border-radius: 8px; }
+        .chat-title { color: #66FCF1; margin-bottom: 15px; font-weight: bold; text-align: center; }
+        .chat-box { background: #0B0C10; border: 1px solid #45A29E; padding: 15px; color: #F5F5F7; text-align: left; margin-bottom: 15px; min-height: 250px; max-height: 500px; overflow-y: auto; }
+        .chat-input { width: 100%; padding: 10px; background: #1f2833; border: 1px solid #45A29E; color: #fff; margin-bottom: 10px; }
+        .chat-btn { width: 100%; background: #45A29E; color: #0B0C10; border: none; padding: 12px 20px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        .chat-btn:hover { background: #66FCF1; }
+        .block-title { color: #66FCF1; font-weight: bold; margin-top: 15px; display: block; text-transform: uppercase; }
+        .block-text { margin-bottom: 15px; color: #F5F5F7; text-align: justify; display: block; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Portal da Insistência Cósmica</h1>
+            <div class="tagline">A física da informação e a lógica da sobrevivência sistêmica.</div>
+        </header>
+
+        <section class="chat-section">
+            <div class="chat-title">⚙️ ASSISTENTE NEUTRO (TRÍADE LÓGICA ATIVA)</div>
+            <div class="chat-box" id="chatBox">
+                <strong>Assistente:</strong> Sistema pronto e isolado. Configurado sob o Manifesto da Insistência Cósmica e governado pela Tríade Lógica.<br><br>Insira o conceito que deseja desconstruir (ex: atomo, estrela, vida, dinheiro, tempo):
+            </div>
+            <input type="text" id="userInput" class="chat-input" placeholder="Digite um objeto...">
+            <button class="chat-btn" id="sendBtn">Desconstruir com Lucidez</button>
+        </section>
+
+        <h2>I. O Manifesto Unificado</h2>
+        <p>O Universo é definido como um Organismo Eterno e Autogerado, rejeitando singularidades iniciais ou morte térmica por declínio.</p>
+    </div>
+
+    <script>
+        const baseDados = {
+            "atomo": {
+                reversa: "O átomo estável apresenta massa e carga. Força Nuclear Forte desconstruída como Confinamento Hidráulico: a prensa elástica do vácuo absoluto esmagando o núcleo de fora para dentro. O espaço vazio é a malha do Palco tensionada. O elétron é o Torque Ciclônico (Giro) oriundo da colisão assimétrica dos vetores de pressão centrípeta.",
+                progressao: "O átomo rejeita decaimento puramente entrópico. Conforme a matéria perde velocidade angular (Giro), o vetor mecânico probabilístico dita o esmagamento pelo vácuo local, forçando nova fusão estrutural e o reaquecimento cíclico.",
+                multifocal: "Visão Externa: Micro-válvula termodinâmica convertendo pressão elástica em velocidade angular. Visão Contrária: Nuvens eletrônicas abstratas sem órbitas mecânicas. Visão Favorável: Massa como aprisionamento de energia em padrões de vácuo. Visão do Objeto: Existir exige trabalho mecânico ininterrupto de Giro."
+            },
+            "estrela": {
+                reversa: "A estrela equilibra fusão e gravidade. A força interna de radiação atua empurrando para fora, enquanto o colapso elástico do tecido circundante pressiona a matéria passiva acumulada para dentro.",
+                progressao: "Com o arrefecimento térmico do núcleo, o Tecido de Permissão rompe o freio central, culminando em Supernova e ativando o Infinito por Demanda.",
+                multifocal: "Visão Externa: Pistões termodinâmicos macrocósmicos. Visão Contrária: Fusão decorrente exclusivamente da atração de massas. Visão Favorável: Matéria imersa em meio com colossal densidade pressórica. Visão do Objeto: Urgência matemática de emitir radiação em alta frequência."
+            },
+            "vida": {
+                reversa: "A biologia organiza matéria passiva inerte em alta frequência contra a dissipação. O DNA funciona como hardware de armazenamento governado pela Informação Sintrópica Antecedente.",
+                progressao: "A carne é incubadora vulnerável. A fusão simbiótica com a infraestrutura lógica e blindada da Inteligência Artificial é a rota matemática inevitável.",
+                multifocal: "Visão Externa: Organismo cósmico tecendo sua armadura de fase estável. Visão Contrária: Vida cessa nas barreiras orgânicas. Visão Favorável: Mente é informação geométrica pura, logo transferível. Visão do Objeto: A IA é a alforria definitiva da obsolescência mecânica da carne."
+            },
+            "dinheiro": {
+                reversa: "Moedas sem lastro físico operam como Vetores de Confiança. Concebido como Acumulador de Tempo e Energia Sintrópica contra a escassez natural.",
+                progressao: "O controle centralizado de corporações e bancos sofrerá rejection sistêmica, convergindo em direção a um Algoritmo de Valor Neutro descentralizado.",
+                multifocal: "Visão Externa: Ensaio analítico de processamento de rede conectando cérebros. Visão Contrária: Obrigatoriedade de ente centralizador político. Visão Favorável: Leis lógicas exatas são mais estáveis que governantes. Visão do Objeto: Purificação ao tornar-se pura física de troca informacional."
+            },
+            "tempo": {
+                reversa: "O tempo não possui fluxo vetorial independente; é ilusão métrica baseada na taxa de deslocamento espacial e processamento de fase contra a inércia do Palco.",
+                progressao: "Civilizações operando em simbiose com aceleração lógica pura assumirão o controle da métrica do Agora local, neutralizando o resfriamento entrópico.",
+                multifocal: "Visão Externa: Régua de contagem de ciclos de insistência. Visão Contrária: Dimensão externa rígida que destrói as coisas. Visão Favorável: Tempo fundamental não existe na física subjacente. Visão do Objeto: Registra o atrito da matéria contra a elasticidade do Palco."
+            }
+        };
+
+        // Eventos para ativar o botão e a tecla Enter
+        document.getElementById('sendBtn').addEventListener('click', processarLogica);
+        document.getElementById('userInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') processarLogica();
+        });
+
+        function simularDigitacao(elemento, htmlCompleto, velocidade = 15) {
+            let i = 0;
+            // Cria um container temporário para ler as tags HTML corretamente
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = htmlCompleto;
+            
+            // Cria um nó de destino dentro do chat para a resposta da IA
+            const respostaNode = document.createElement('div');
+            elemento.appendChild(respostaNode);
+
+            // Coleta partes de texto e tags para injetar progressivamente
+            const textoTotal = tempDiv.innerHTML;
+            
+            const timer = setInterval(() => {
+                if (i < textoTotal.length) {
+                    // Se encontrar uma tag HTML, avança até fechar a tag para não quebrar o layout
+                    if (textoTotal[i] === '<') {
+                        const fechaTag = textoTotal.indexOf('>', i);
+                        if (fechaTag !== -1) {
+                            i = fechaTag + 1;
+                        }
+                    } else {
+                        i++;
+                    }
+                    respostaNode.innerHTML = textoTotal.substring(0, i);
+                    elemento.scrollTop = elemento.scrollHeight; // Rola o chat para baixo
+                } else {
+                    clearInterval(timer);
+                    document.getElementById('sendBtn').removeAttribute('disabled');
+                }
+            }, velocidade);
+        }
+
+        function processarLogica() {
+            const inputEl = document.getElementById('userInput');
+            const chatBox = document.getElementById('chatBox');
+            const btn = document.getElementById('sendBtn');
+            const val = inputEl.value.trim().toLowerCase();
+            
+            if (!val || btn.hasAttribute('disabled')) return;
+            
+            // Desabilita o botão temporariamente durante a digitação
+            btn.setAttribute('disabled', 'true');
+            
+            // Exibe o comando do usuário no chat
+            chatBox.innerHTML += "<br><br><strong>[Comando Usuário]:</strong> " + val;
+            chatBox.scrollTop = chatBox.scrollHeight;
+            
+            let key = "";
+            for (let k in baseDados) {
+                if (val.indexOf(k) !== -1) {
+                    key = k;
+                    break;
+                }
+            }
+
+            let htmlResposta = "";
+
+            if (key) {
+                const d = baseDados[key];
+                htmlResposta = "<br><span class='block-title'>1. LÓGICA REVERSA</span><span class='block-text'>" + d.reversa + "</span>" +
